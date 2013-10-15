@@ -1,0 +1,8 @@
+agithub
+requests
+django
+mysql-python
+South
+python-memcached
+django-celery
+GitPython
