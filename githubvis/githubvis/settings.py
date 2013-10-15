@@ -173,4 +173,4 @@ LOGGING = {
 
 
 GITHUB_USERNAME = 'rozap'
-GITHUB_PASS = ''
+GITHUB_PASS = 'nobrakes2'

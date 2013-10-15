@@ -32,12 +32,6 @@ def dj():
 
 
 
-
-
-
-
-
-
 class Analyzer(object):
 
     def __init__(self, username, repo_name):
