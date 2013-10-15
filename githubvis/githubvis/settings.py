@@ -129,7 +129,6 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'djcelery',
     'repos',
-    'contributors',
     'south',
 
     # Uncomment the next line to enable the admin:
@@ -173,4 +172,4 @@ LOGGING = {
 
 
 GITHUB_USERNAME = 'rozap'
-GITHUB_PASS = 'nobrakes2'
+GITHUB_PASS = ''
