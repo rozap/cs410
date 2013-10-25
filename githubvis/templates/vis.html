@@ -1,0 +1,26 @@
+{% extends "core.html" %}
+
+
+{% block head %}
+<script type="text/javascript" src={{ STATIC_URL }}js/libs/jquery.js></script>
+<script type="text/javascript" src={{ STATIC_URL }}js/libs/underscore.js></script>
+<script type="text/javascript" src={{ STATIC_URL }}js/libs/three.js></script>
+<script type="text/javascript" src={{ STATIC_URL }}js/libs/three-extras.js></script>
+<script type="text/javascript" src={{ STATIC_URL }}js/libs/tween.js></script>
+<script type="text/javascript" src={{ STATIC_URL }}js/libs/globe.js></script>
+<script type="text/javascript" src={{ STATIC_URL }}js/app.js></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		var d = new Drawer({{repo.id}});
+	});
+</script>
+
+{% endblock %}
+
+{% block body %}
+
+
+<div id="globe"></div>
+
+{% endblock %}

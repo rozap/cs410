@@ -24,10 +24,16 @@ def get_remote_repo(url):
     Repo.clone_from(url, repo_path(username, repo))
 
 
+def examine_repo(url):
+    get_remote_repo(url)
+    username, repo_name = repo_from_url(url)
+    a = Analyzer(username, repo_name)
+    a.walk_commits()
 
-def dj():
-    analyzer = Analyzer('django', 'django.git')
-    return analyzer.walk_commits()
+
+# def dj():
+#     analyzer = Analyzer('django', 'django.git')
+#     return analyzer.walk_commits()
 
 
 
@@ -82,7 +88,7 @@ class Analyzer(object):
                 try:
                     a_syntax_tree = ast.parse(a_blob_text)
                     b_syntax_tree = ast.parse(b_blob_text)
-                except SyntaxError:
+                except (ValueError, SyntaxError) as e:
                     #Someone has committed some crap that's not valid python, 
                     #carry on...
                     continue                
@@ -97,7 +103,7 @@ class Analyzer(object):
                 b_func_names = [f.name for f in b_funcs]
 
                 new_funcs = new_funcs + list(set(a_func_names) - set(b_func_names))
-
+                print new_funcs
         return new_funcs
 
 

@@ -1,0 +1,23 @@
+{% extends "core.html" %}
+
+
+{% block body %}
+<div class="container">
+	<h4>Some repositories</h4>
+	<div class="row">
+		<div class="col-lg-4">
+			<ul class="nav nav-pills nav-stacked">
+				{% for repo in repos %}
+				<li>
+					<a href="/repos/{{repo.id}}">{{repo.name}}</a>
+				</li>
+				{% empty %}
+				<li>
+					<h6>No Repos Yet</h6>
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</div>
+{% endblock %}

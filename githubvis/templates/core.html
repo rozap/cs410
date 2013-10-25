@@ -1,0 +1,25 @@
+<!doctype html>
+
+<html{% if language %} lang="{{ language }}"{% endif %}>
+	<head>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ 		<link rel="icon" href="{{STATIC_URL}}img/favicon.ico">
+		<title>{% block title %}Visualize some GitHubs!{% endblock %}</title>
+ 		<link rel="stylesheet" type="text/css" media="all" href="{{STATIC_URL}}css/style.css">
+ 		<script type="text/javascript">
+ 			window.STATIC_URL = '{{ STATIC_URL }}';
+ 		</script>
+		{% block head %}{% endblock %}
+
+	</head>
+	<body>
+			{% block body %}{% endblock %}
+	</body>
+</html>
+
+
+
+
+
