@@ -5,7 +5,6 @@ import ast
 import re
 from threading import Thread
 from django.db import transaction
-from github3 import login
 
 
 def repo_from_url(url):
