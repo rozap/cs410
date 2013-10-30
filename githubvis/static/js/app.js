@@ -1,7 +1,5 @@
 var Drawer = function(repoId) {
 
-
-
 	$.getJSON('/api/repos/' + repoId).success(function(resp) {
 		var globe = new DAT.Globe($('#globe')[0]);
 
