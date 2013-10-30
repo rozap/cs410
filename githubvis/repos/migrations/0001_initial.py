@@ -20,14 +20,16 @@ class Migration(SchemaMigration):
         db.create_table(u'repos_actor', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('full_name', self.gf('django.db.models.fields.CharField')(max_length=255)),
-            ('lat', self.gf('django.db.models.fields.FloatField')()),
-            ('lng', self.gf('django.db.models.fields.FloatField')()),
+            ('lat', self.gf('django.db.models.fields.FloatField')(default=0)),
+            ('lng', self.gf('django.db.models.fields.FloatField')(default=0)),
+            ('loc', self.gf('django.db.models.fields.CharField')(default='', max_length=255)),
         ))
         db.send_create_signal(u'repos', ['Actor'])
 
         # Adding model 'Commit'
         db.create_table(u'repos_commit', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
+            ('repo', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['repos.Repo'])),
             ('actor', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['repos.Actor'])),
             ('hexsha', self.gf('django.db.models.fields.CharField')(unique=True, max_length=255)),
         ))
@@ -61,14 +63,16 @@ class Migration(SchemaMigration):
             'Meta': {'object_name': 'Actor'},
             'full_name': ('django.db.models.fields.CharField', [], {'max_length': '255'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'lat': ('django.db.models.fields.FloatField', [], {}),
-            'lng': ('django.db.models.fields.FloatField', [], {})
+            'lat': ('django.db.models.fields.FloatField', [], {'default': '0'}),
+            'lng': ('django.db.models.fields.FloatField', [], {'default': '0'}),
+            'loc': ('django.db.models.fields.CharField', [], {'default': "''", 'max_length': '255'})
         },
         u'repos.commit': {
             'Meta': {'object_name': 'Commit'},
             'actor': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['repos.Actor']"}),
             'hexsha': ('django.db.models.fields.CharField', [], {'unique': 'True', 'max_length': '255'}),
-            u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'})
+            u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
+            'repo': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['repos.Repo']"})
         },
         u'repos.function': {
             'Meta': {'object_name': 'Function'},
