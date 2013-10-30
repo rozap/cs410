@@ -1,4 +1,3 @@
-agithub
 requests
 django
 mysql-python

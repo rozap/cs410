@@ -31,9 +31,9 @@ def examine_repo(url):
     a.walk_commits()
 
 
-# def dj():
-#     analyzer = Analyzer('django', 'django.git')
-#     return analyzer.walk_commits()
+def dj():
+    analyzer = Analyzer('kennethreitz', 'requests')
+    return analyzer.walk_commits()
 
 
 
@@ -59,22 +59,24 @@ class Analyzer(object):
         return False
 
 
-    def get_classes(self, entities):
-        return [e for e in entities if type(e) == ast.ClassDef]
+    def get_classes(self, entities, namespace):
+        return [(e, namespace) for e in entities if type(e) == ast.ClassDef]
 
 
-    def get_functions(self, entities):
-        return [e for e in entities if type(e) == ast.FunctionDef]
+    def get_functions(self, entities, namespace):
+        return [(e, namespace) for e in entities if type(e) == ast.FunctionDef]
 
 
-    def get_all_funcs_from_body(self, body):
-        funcs = self.get_functions(body)
-        classes = self.get_classes(body)
-        for c in classes:
-            funcs = funcs + self.get_all_funcs_from_body(c.body)
+    def get_all_funcs_from_body(self, body, namespace = ''):
+        funcs = self.get_functions(body, namespace)
+        classes = self.get_classes(body, namespace)
+        for c, class_namespace in classes:
+            if len(class_namespace) > 1:
+                ns = class_namespace + ':' + c.name
+            else:
+                ns = c.name
+            funcs = funcs + self.get_all_funcs_from_body(c.body, ns)
         return funcs
-
-
 
 
 
@@ -99,11 +101,10 @@ class Analyzer(object):
                 b_entities = b_syntax_tree.body
                 b_funcs = self.get_all_funcs_from_body(b_entities)
 
-                a_func_names = [f.name for f in a_funcs]
-                b_func_names = [f.name for f in b_funcs]
+                a_func_names = [namespace + ':' + f.name for (f, namespace) in a_funcs]
+                b_func_names = [namespace + ':' + f.name for (f, namespace) in b_funcs]
 
                 new_funcs = new_funcs + list(set(a_func_names) - set(b_func_names))
-                print new_funcs
         return new_funcs
 
 
@@ -141,8 +142,11 @@ class Analyzer(object):
                 commit.save()
 
             for fun in val['funcs']:
-                fmodel = Function(name = fun, commit = commit)
+                fname = fun.split(':')[-1]
+                namespace = ':'.join(fun.split(':')[:-1])
+                fmodel = Function(name = fun, commit = commit, namespace = namespace)
                 fmodel.save()
+                print "Saved ns `%s` fn `%s`" % (namespace, fname)
 
         self.cached_data.clear()
 
