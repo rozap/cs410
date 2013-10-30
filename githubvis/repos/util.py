@@ -83,7 +83,7 @@ class Analyzer(object):
                 try:
                     a_syntax_tree = ast.parse(a_blob_text)
                     b_syntax_tree = ast.parse(b_blob_text)
-                except (ValueError, SyntaxError) as e:
+                except (ValueError, SyntaxError, TypeError) as e:
                     #Someone has committed some crap that's not valid python, 
                     #carry on...
                     continue                
