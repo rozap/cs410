@@ -40,3 +40,4 @@ class Commit(BaseModel):
 class Function(BaseModel):
     name = models.CharField(max_length=255)
     commit = models.ForeignKey(Commit)
+    namespace = models.CharField(max_length=2047, default = '')
