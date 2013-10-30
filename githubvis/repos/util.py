@@ -14,8 +14,8 @@ def repo_from_url(url):
     return (username, repo)
 
 def repo_path(username, repo_name):
-    return settings.REPO_ROOT + '%s/%s' % (username, repo_name)
-
+    path = settings.REPO_ROOT + '%s/%s' % (username, repo_name)
+    return path
 
 
 def get_remote_repo(url):
@@ -28,12 +28,6 @@ def examine_repo(url):
     username, repo_name = repo_from_url(url)
     a = Analyzer(username, repo_name)
     a.walk_commits()
-
-
-def dj():
-    analyzer = Analyzer('kennethreitz', 'requests')
-    return analyzer.walk_commits()
-
 
 
 
