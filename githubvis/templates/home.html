@@ -1,11 +1,23 @@
 {% extends "core.html" %}
 
+{% block head %}
+<script type="text/javascript" src="{{ STATIC_URL }}js/home.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var h = new Home();
+	});
+</script>
+
+{% endblock %}
+
+
+
 
 {% block body %}
 <div class="container">
-	<h4>Some repositories</h4>
 	<div class="row">
 		<div class="col-lg-4">
+			<h4>Some repositories</h4>
 			<ul class="nav nav-pills nav-stacked">
 				{% for repo in repos %}
 				<li>
@@ -17,6 +29,21 @@
 				</li>
 				{% endfor %}
 			</ul>
+		</div>
+		<div class="col-lg-8">
+			<h4>Or submit a new one</h4>
+			<div class="alert" style="display:none" id="submit-result"></div>
+			<div class="input-group">
+				<input type="text" 
+					name="url" 
+					id="repo-url"
+					placeholder="A GitHub repo url with some python code..."
+					class="form-control input-with-feedback"/>
+				<span class="input-group-btn">
+					<button class="btn btn-primary home-action"
+					data-action="submitRepo" type="button">Submit</button>
+				</span>
+			</div>
 		</div>
 	</div>
 </div>

@@ -6,7 +6,7 @@ import json
 from threading import Thread
 import time
 
-def test():
+def geocode_locations():
     l = Locator()
     l.get_locations()
     l.geocode()

@@ -8,8 +8,13 @@
  		<link rel="icon" href="{{STATIC_URL}}img/favicon.ico">
 		<title>{% block title %}Visualize some GitHubs!{% endblock %}</title>
  		<link rel="stylesheet" type="text/css" media="all" href="{{STATIC_URL}}css/style.css">
+		<script type="text/javascript" src={{ STATIC_URL }}js/libs/jquery.js></script>
+		<script type="text/javascript" src={{ STATIC_URL }}js/libs/underscore.js></script>
+		<script type="text/javascript" src={{ STATIC_URL }}js/core.js></script>
+
  		<script type="text/javascript">
  			window.STATIC_URL = '{{ STATIC_URL }}';
+ 			window.tok = '{{ csrf_token }}'; //trolololo
  		</script>
 		{% block head %}{% endblock %}
 

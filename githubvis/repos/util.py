@@ -23,7 +23,7 @@ def get_remote_repo(url):
     Repo.clone_from(url, repo_path(username, repo))
 
 
-def examine_repo(url):
+def analyze_repo(url):
     get_remote_repo(url)
     username, repo_name = repo_from_url(url)
     a = Analyzer(username, repo_name)
