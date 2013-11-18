@@ -50,10 +50,10 @@ has been built (all features added by Steve Yegge, all bugs added by Yin Wang).
 Now you can build a simple "code-browser" of the Python 2.7 standard library
 with the following command line:
 
-    java -jar target/pysonar-2.0-SNAPSHOT.jar /usr/lib/python2.7 ./html
+    java -jar target/pysonar-2.0-SNAPSHOT.jar /some_pyhthon_project ./output_directory
 
-This will take a few minutes. You should find some interactive HTML files inside
-the _html_ directory after this process.
+This will take a few minutes. This will create an output.json file of the calling functions 
+and the functions that they call, with their fully qualified names.
 
 
 
