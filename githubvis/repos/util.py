@@ -24,7 +24,7 @@ def get_remote_repo(url):
 
 
 def analyze_repo(url):
-    get_remote_repo(url)
+    # get_remote_repo(url)
     username, repo_name = repo_from_url(url)
     a = Analyzer(username, repo_name)
     a.walk_commits()
@@ -37,6 +37,7 @@ class Analyzer(object):
         self.repo = Repo(repo_path(username, repo_name))
 
         try:
+            print "Repo exists"
             self.repo_model = RepoModel.objects.get(username = username, name = repo_name)
         except RepoModel.DoesNotExist:
             self.repo_model = RepoModel(username = username, name = repo_name)
@@ -79,6 +80,9 @@ class Analyzer(object):
             if diff.a_blob and diff.b_blob:
                 a_blob_text = diff.a_blob.data_stream.read()
                 b_blob_text = diff.b_blob.data_stream.read()
+
+                print diff.a_blob.name
+                print diff.b_blob.name
 
                 try:
                     a_syntax_tree = ast.parse(a_blob_text)
