@@ -1,7 +1,7 @@
 # Create your views here.
 import json
 from django.http import HttpResponse, HttpResponseForbidden
-from repos.models import Repo, Actor, Commit, Function
+from repos.models import Repo, Actor, Commit, Function, FunctionCall
 import datetime
 from repos.models import BaseModel
 from django.db.models.query import QuerySet
@@ -20,13 +20,15 @@ def json_view(fn):
 
 @json_view
 def repo(request, repo_id):
-    if request.method == 'GET':
+    try:
+        repo = Repo.objects.get(id = repo_id)
         functions = Function.objects.select_related('commit', 'commit__actor')\
             .filter(commit__repo__id = repo_id)\
             .exclude(commit__actor__lat = 0)\
             .exclude(commit__actor__lng = 0)
         return functions, 200, ['commit.repo.id', 'commit.actor.loc', 'id']
-    
+    except Repo.DoesNotExist:
+        return {'message' : 'repo not found'}, 404, []
 
 @csrf_exempt
 @json_view
@@ -53,3 +55,16 @@ def repos(request):
             'message' : 'The submission is being processed. It takes a while, so go grab lunch or something.'
         }, 200, []
 
+
+
+@json_view
+def interactions(request, repo_id):
+    try:
+        repo = Repo.objects.get(id = repo_id)
+        calls = FunctionCall.objects.filter(caller__commit__repo = repo)\
+            .exclude(caller__commit__actor__lat = 0)\
+            .exclude(callee__commit__actor__lat = 0)
+
+        return calls, 200, []
+    except Repo.DoesNotExist:
+        return {'message' : 'Invalid id'}, 404, []
