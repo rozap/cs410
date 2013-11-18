@@ -43,7 +43,7 @@ class Commit(BaseModel):
 
 
 class Function(BaseModel):
-    name = models.CharField(max_length=64, db_index = True)
+    name = models.CharField(max_length=512)
     commit = models.ForeignKey(Commit)
     path = models.CharField(max_length=512, default = '')
 
