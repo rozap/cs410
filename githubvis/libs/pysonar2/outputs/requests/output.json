@@ -1,0 +1,562 @@
+{
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/fields.py:assmethod": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/fields.py:guess_content_type"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/request.py:request": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/request.py:request_encode_url",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/request.py:request_encode_body"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_user_agent_transfers": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/response.py:decompress": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/response.py:decompress"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/adapters.py:__setstate__": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/adapters.py:init_poolmanager"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/models.py:iter_content": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/models.py:generate"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_DIGEST_AUTH_RETURNS_COOKIE": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/request.py:request_encode_body": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/request.py:urlopen"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/adapters.py:__init__": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/adapters.py:init_poolmanager"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/fields.py:make_multipart": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/fields.py:_render_parts"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/cookies.py:get": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/cookies.py:_find_no_duplicates"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_prepared_from_session": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/universaldetector.py:__init__": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/universaldetector.py:reset"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/filepost.py:encode_multipart_formdata": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/filepost.py:choose_boundary",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/filepost.py:iter_field_objects"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/eucjpprober.py:feed": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/eucjpprober.py:get_charset_name",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/eucjpprober.py:get_confidence"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/sessions.py:get": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/sessions.py:request"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/sessions.py:options": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/sessions.py:request"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/sbcharsetprober.py:feed": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/sbcharsetprober.py:get_confidence"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/chardistribution.py:feed": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/chardistribution.py:get_order"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/auth.py:__call__": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/auth.py:_basic_auth_str"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/connectionpool.py:_make_request": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/connectionpool.py:_get_timeout"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/api.py:delete": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/api.py:request"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/contrib/pyopenssl.py:getpeercert": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/contrib/pyopenssl.py:get_subj_alt_name"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/response.py:read": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/response.py:_get_decoder",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/response.py:decompress",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/response.py:decompress",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/response.py:release_conn"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/packages/six.py:print_": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/packages/six.py:write",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/packages/six.py:write",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/packages/six.py:write"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/models.py:prepare_auth": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/models.py:prepare_content_length"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/cookies.py:morsel_to_cookie": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/cookies.py:create_cookie"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/packages/ordered_dict.py:__reduce__": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/packages/ordered_dict.py:__init__"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_request_cookie_overrides_session_cookie": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/models.py:copy": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/models.py:__init__"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/connectionpool.py:urlopen": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/connectionpool.py:is_same_host",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/connectionpool.py:_get_conn",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/connectionpool.py:_make_request",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/connectionpool.py:_put_conn",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/connectionpool.py:urlopen",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/connectionpool.py:urlopen"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/api.py:get": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/api.py:request"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_cookie_persists_via_api": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/api.py:options": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/api.py:request"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/response.py:__init__": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/response.py:read"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/cookies.py:update": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/cookies.py:set_cookie"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/cookies.py:__getitem__": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/cookies.py:_find_no_duplicates"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_unicode_header_name": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/connectionpool.py:connection_from_url": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/connectionpool.py:__init__",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/connectionpool.py:__init__"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/sessions.py:delete": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/sessions.py:request"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/sbcharsetprober.py:__init__": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/sbcharsetprober.py:reset"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_HTTP_302_ALLOW_REDIRECT_GET": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/util.py:parse_url": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/util.py:split_first"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_request_ok_set": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_decompress_gzip": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_generic_cookiejar_works": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/structures.py:__eq__": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/structures.py:__init__",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/structures.py:lower_items",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/structures.py:lower_items"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/util.py:get_host": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/util.py:parse_url"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/cookies.py:__delitem__": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/cookies.py:remove_cookie_by_name"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_POSTBIN_GET_POST_FILES_WITH_DATA": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_session_pickling": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/cookies.py:__setitem__": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/cookies.py:set"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/sessions.py:post": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/sessions.py:request"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/utils.py:get_environ_proxies": [
+    "\u003cLambda:11483:[k]:\u003cBoolOp:or:[    Call to: \u003cAttribute:11493:\u003cAttribute:11493:os.environ\u003e.get\u003e:[k]:11493,     Call to: \u003cAttribute:11514:\u003cAttribute:11514:os.environ\u003e.get\u003e:[    Call to: \u003cAttribute:11529:k.upper\u003e:[]:11529]:11514]\u003e\u003e"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/__init__.py:charade_cli": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/__init__.py:_description_of"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_DIGESTAUTH_WRONG_HTTP_401_GET": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_mixed_case_scheme_acceptable": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_HTTP_200_OK_GET_WITH_PARAMS": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/hebrewprober.py:__init__": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/hebrewprober.py:reset"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/fields.py:_render_parts": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/fields.py:_render_part"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/poolmanager.py:urlopen": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/poolmanager.py:_set_proxy_headers"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/api.py:post": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/api.py:request"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_requests_in_history_are_not_overridden": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_cookie_quote_wrapped": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/sessions.py:put": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/sessions.py:request"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/utf8prober.py:feed": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/utf8prober.py:get_confidence"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/models.py:__init__": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/models.py:register_hook"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/sessions.py:__exit__": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/sessions.py:close"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/poolmanager.py:connection_from_url": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/poolmanager.py:connection_from_host"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/packages/six.py:_resolve": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/packages/six.py:_import_module"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/api.py:put": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/api.py:request"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/poolmanager.py:connection_from_host": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/poolmanager.py:_new_pool"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/auth.py:build_digest_header": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/auth.py:md5_utf8",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/auth.py:md5_utf8",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/auth.py:md5_utf8",
+    "\u003cLambda:2630:[s, d]:    Call to: hash_utf8:[\u003cBinOp:\u003cStr\u003e null \u003cTuple:2664:[s, d]\u003e\u003e]:2643\u003e",
+    "\u003cLambda:2630:[s, d]:    Call to: hash_utf8:[\u003cBinOp:\u003cStr\u003e null \u003cTuple:2664:[s, d]\u003e\u003e]:2643\u003e"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/cookies.py:operty": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/cookies.py:get_origin_req_host"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/models.py:prepare_hooks": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/models.py:register_hook"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_HTTP_200_OK_HEAD": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/eucjpprober.py:__init__": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/eucjpprober.py:reset"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_unicode_multipart_post": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/utils.py:parse_list_header": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/utils.py:unquote_header_value"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/api.py:head": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/api.py:request"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/adapters.py:get_connection": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/adapters.py:proxy_headers"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/charsetgroupprober.py:get_charset_name": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/charsetgroupprober.py:get_confidence"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/cookies.py:cookiejar_from_dict": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/cookies.py:create_cookie",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/cookies.py:set_cookie"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/mbcharsetprober.py:feed": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/mbcharsetprober.py:get_charset_name",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/mbcharsetprober.py:get_confidence"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/models.py:iter_lines": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/models.py:iter_content"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_urlencoded_get_query_multivalued_param": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/poolmanager.py:proxy_from_url": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/poolmanager.py:__init__"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_basicauth_with_netrc": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_BASICAUTH_TUPLE_HTTP_200_OK_GET": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/util.py:operty": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/util.py:get_connect_duration",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/util.py:get_connect_duration"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/utils.py:parse_dict_header": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/utils.py:unquote_header_value"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/connectionpool.py:_get_conn": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/connectionpool.py:_new_conn"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/escprober.py:__init__": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/escprober.py:reset"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/sessions.py:head": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/sessions.py:request"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_DIGEST_AUTH_SETS_SESSION_COOKIES": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/cookies.py:extract_cookies_to_jar": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/cookies.py:__init__",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/cookies.py:__init__"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_autoset_header_values_are_native": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/packages/ordered_dict.py:__eq__": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/packages/ordered_dict.py:items"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/sessions.py:send": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/sessions.py:get_adapter",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/sessions.py:resolve_redirects"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_params_are_merged_case_sensitive": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_HTTP_200_OK_PUT": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_header_remove_is_case_insensitive": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/util.py:assmethod": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/util.py:__init__"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_can_send_nonstring_objects_with_files": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/structures.py:copy": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/structures.py:__init__"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/sessions.py:patch": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/sessions.py:request"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/adapters.py:send": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/adapters.py:get_connection",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/adapters.py:cert_verify",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/adapters.py:request_url",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/adapters.py:add_headers",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/adapters.py:build_response"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/models.py:prepare": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/models.py:__init__",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/models.py:prepare"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/models.py:__iter__": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/models.py:iter_content"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_custom_content_type": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_POSTBIN_GET_POST_FILES": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_time_elapsed_blank": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/models.py:prepare_body": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/models.py:prepare_content_length"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_HTTP_200_OK_GET_ALTERNATIVE": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "\u003cLambda:2630:[s, d]:    Call to: hash_utf8:[\u003cBinOp:\u003cStr\u003e null \u003cTuple:2664:[s, d]\u003e\u003e]:2643\u003e": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/auth.py:md5_utf8"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_different_encodings_dont_break_post": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_set_cookie_on_301": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/sessions.py:__init__": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/sessions.py:mount",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/sessions.py:mount"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/cookies.py:set": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/cookies.py:remove_cookie_by_name",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/cookies.py:morsel_to_cookie",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/cookies.py:create_cookie",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/cookies.py:set_cookie"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_DIGEST_HTTP_200_OK_GET": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_header_keys_are_native": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/sjisprober.py:feed": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/sjisprober.py:get_charset_name",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/sjisprober.py:get_confidence"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/packages/ordered_dict.py:update": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/packages/ordered_dict.py:keys"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_no_content_length": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_status_raising": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/utils.py:requote_uri": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/utils.py:unquote_unreserved"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/sessions.py:resolve_redirects": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/sessions.py:send"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_cookie_sent_on_redirect": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/sjisprober.py:__init__": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/sjisprober.py:reset"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/packages/ordered_dict.py:__repr__": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/packages/ordered_dict.py:items"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/cookies.py:get_origin_req_host": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/cookies.py:get_host"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_unicode_get": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/connectionpool.py:_new_conn": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/connectionpool.py:_prepare_conn"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/fields.py:_render_part": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/fields.py:format_header_param"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_DIGEST_STREAM": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/cookies.py:get_cookie_header": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/cookies.py:__init__",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/cookies.py:get_new_headers"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/hebrewprober.py:feed": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/hebrewprober.py:get_state",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/hebrewprober.py:is_final",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/hebrewprober.py:is_non_final",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/hebrewprober.py:is_final"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/util.py:clone": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/util.py:__init__"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/utf8prober.py:__init__": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/utf8prober.py:reset"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/utils.py:default_headers": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/utils.py:default_user_agent"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/codingstatemachine.py:__init__": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/codingstatemachine.py:reset"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/auth.py:handle_401": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/auth.py:build_digest_header"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_fixes_1329": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/exceptions.py:__init__": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/exceptions.py:__init__"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/connectionpool.py:__init__": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/connectionpool.py:__init__"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/jpcntx.py:feed": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/jpcntx.py:get_order"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/sessions.py:session": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/sessions.py:__init__"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_cookie_removed_on_expire": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/request.py:request_encode_url": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/request.py:urlopen"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/response.py:stream": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/response.py:read"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/util.py:get_connect_duration": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/util.py:current_time"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/packages/ordered_dict.py:__init__": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/packages/ordered_dict.py:update"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_uppercase_scheme_redirect": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/jpcntx.py:__init__": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/jpcntx.py:reset"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/packages/ssl_match_hostname/_implementation.py:match_hostname": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/packages/ssl_match_hostname/_implementation.py:_dnsname_match",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/packages/ssl_match_hostname/_implementation.py:_dnsname_match"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/util.py:start_connect": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/util.py:current_time"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/response.py:operty": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/response.py:read"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/latin1prober.py:__init__": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/latin1prober.py:reset"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/cookies.py:copy": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/cookies.py:update"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_conflicting_post_params": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/models.py:operty": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/models.py:iter_content"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/response.py:_get_decoder": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/response.py:__init__"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/contrib/pyopenssl.py:ssl_wrap_socket": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/urllib3/contrib/pyopenssl.py:__init__"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/sessions.py:request": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/sessions.py:prepare_request",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/sessions.py:merge_setting",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/sessions.py:merge_setting",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/sessions.py:merge_setting",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/sessions.py:merge_setting",
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/sessions.py:send"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/chardistribution.py:__init__": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/packages/charade/chardistribution.py:__init__"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/api.py:patch": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/api.py:request"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/utils.py:get_unicode_from_response": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/requests/utils.py:get_encoding_from_headers"
+  ],
+  "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:test_HTTP_200_OK_GET_WITH_MIXED_PARAMS": [
+    "/home/chris/workspace/cs410/vis_env/cs410/githubvis/media/repos/kennethreitz/requests/test_requests.py:httpbin"
+  ]
+}
