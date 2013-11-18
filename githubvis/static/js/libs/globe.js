@@ -213,7 +213,6 @@ DAT.Globe = function(container, colorFn) {
     opts.animated = opts.animated || false;
     this.is_animated = opts.animated;
     opts.format = opts.format || 'magnitude'; // other option is 'legend'
-    console.log(opts.format);
     if (opts.format === 'magnitude') {
       step = 3;
       colorFnWrapper = function(data, i) {
@@ -277,11 +276,8 @@ DAT.Globe = function(container, colorFn) {
         }));
       } else {
         if (this._baseGeometry.morphTargets.length < 8) {
-          console.log('t l', this._baseGeometry.morphTargets.length);
           var padding = 8 - this._baseGeometry.morphTargets.length;
-          console.log('padding', padding);
           for (var i = 0; i <= padding; i++) {
-            console.log('padding', i);
             this._baseGeometry.morphTargets.push({
               'name': 'morphPadding' + i,
               vertices: this._baseGeometry.vertices
@@ -296,6 +292,37 @@ DAT.Globe = function(container, colorFn) {
       }
       scene.addObject(this.points);
     }
+  }
+
+
+  function addLine(fromLat, fromLng, toLat, toLng) {
+
+
+    var phi1 = (90 - fromLat) * Math.PI / 180;
+    var theta1 = (180 - fromLng) * Math.PI / 180;
+    var x1 = 200 * Math.sin(phi1) * Math.cos(theta1);
+    var y1 = 200 * Math.cos(phi1);
+    var z1 = 200 * Math.sin(phi1) * Math.sin(theta1);
+
+    var phi2 = (90 - toLat) * Math.PI / 180;
+    var theta2 = (180 - toLng) * Math.PI / 180;
+    var x2 = 200 * Math.sin(phi2) * Math.cos(theta2);
+    var y2 = 200 * Math.cos(phi2);
+    var z2 = 200 * Math.sin(phi2) * Math.sin(theta2);
+
+
+
+    var geometry = new THREE.Geometry();
+    geometry.vertices.push(new THREE.Vector3(x1, y1, z1));
+    geometry.vertices.push(new THREE.Vector3(x2, y2, z2));
+
+    var material = new THREE.LineBasicMaterial({
+      color: 0x0000ff
+    });
+
+
+    var line = new THREE.Line(geometry, material);
+    scene.addObject(line);
   }
 
   function addPoint(lat, lng, size, color, subgeo) {
@@ -385,7 +412,6 @@ DAT.Globe = function(container, colorFn) {
   }
 
   function onWindowResize(event) {
-    console.log('resize');
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
@@ -456,6 +482,7 @@ DAT.Globe = function(container, colorFn) {
   this.createPoints = createPoints;
   this.renderer = renderer;
   this.scene = scene;
+  this.addLine = addLine;
 
   return this;
 

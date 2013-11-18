@@ -38,13 +38,28 @@ class Migration(SchemaMigration):
         # Adding model 'Function'
         db.create_table(u'repos_function', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('name', self.gf('django.db.models.fields.CharField')(max_length=255)),
+            ('name', self.gf('django.db.models.fields.CharField')(max_length=255, db_index=True)),
             ('commit', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['repos.Commit'])),
+            ('path', self.gf('django.db.models.fields.CharField')(default='', max_length=512)),
         ))
         db.send_create_signal(u'repos', ['Function'])
 
+        # Adding unique constraint on 'Function', fields ['name', 'path']
+        db.create_unique(u'repos_function', ['name', 'path'])
+
+        # Adding model 'FunctionCall'
+        db.create_table(u'repos_functioncall', (
+            (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
+            ('caller', self.gf('django.db.models.fields.related.ForeignKey')(related_name='function_call_caller', to=orm['repos.Function'])),
+            ('callee', self.gf('django.db.models.fields.related.ForeignKey')(related_name='function_call_callee', to=orm['repos.Function'])),
+        ))
+        db.send_create_signal(u'repos', ['FunctionCall'])
+
 
     def backwards(self, orm):
+        # Removing unique constraint on 'Function', fields ['name', 'path']
+        db.delete_unique(u'repos_function', ['name', 'path'])
+
         # Deleting model 'Repo'
         db.delete_table(u'repos_repo')
 
@@ -56,6 +71,9 @@ class Migration(SchemaMigration):
 
         # Deleting model 'Function'
         db.delete_table(u'repos_function')
+
+        # Deleting model 'FunctionCall'
+        db.delete_table(u'repos_functioncall')
 
 
     models = {
@@ -75,10 +93,17 @@ class Migration(SchemaMigration):
             'repo': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['repos.Repo']"})
         },
         u'repos.function': {
-            'Meta': {'object_name': 'Function'},
+            'Meta': {'unique_together': "(('name', 'path'),)", 'object_name': 'Function'},
             'commit': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['repos.Commit']"}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'name': ('django.db.models.fields.CharField', [], {'max_length': '255'})
+            'name': ('django.db.models.fields.CharField', [], {'max_length': '255', 'db_index': 'True'}),
+            'path': ('django.db.models.fields.CharField', [], {'default': "''", 'max_length': '512'})
+        },
+        u'repos.functioncall': {
+            'Meta': {'object_name': 'FunctionCall'},
+            'callee': ('django.db.models.fields.related.ForeignKey', [], {'related_name': "'function_call_callee'", 'to': u"orm['repos.Function']"}),
+            'caller': ('django.db.models.fields.related.ForeignKey', [], {'related_name': "'function_call_caller'", 'to': u"orm['repos.Function']"}),
+            u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'})
         },
         u'repos.repo': {
             'Meta': {'object_name': 'Repo'},
