@@ -12,7 +12,7 @@
  */
 
 var DAT = DAT || {};
-
+var RADIUS = 200;
 DAT.Globe = function(container, colorFn) {
 
   colorFn = colorFn || function(x) {
@@ -123,7 +123,7 @@ DAT.Globe = function(container, colorFn) {
     scene = new THREE.Scene();
     sceneAtmosphere = new THREE.Scene();
 
-    var geometry = new THREE.Sphere(200, 40, 30);
+    var geometry = new THREE.Sphere(RADIUS, 40, 30);
 
     shader = Shaders['earth'];
     uniforms = THREE.UniformsUtils.clone(shader.uniforms);
@@ -252,7 +252,7 @@ DAT.Globe = function(container, colorFn) {
       lng = data[i + 1];
       color = colorFnWrapper(data, i);
       size = data[i + 2];
-      size = size * 200;
+      size = size * RADIUS;
       addPoint(lat, lng, size, color, subgeo);
     }
     if (opts.animated) {
@@ -295,26 +295,64 @@ DAT.Globe = function(container, colorFn) {
   }
 
 
-  function addLine(fromLat, fromLng, toLat, toLng) {
-
-
-    var phi1 = (90 - fromLat) * Math.PI / 180;
-    var theta1 = (180 - fromLng) * Math.PI / 180;
-    var x1 = 200 * Math.sin(phi1) * Math.cos(theta1);
-    var y1 = 200 * Math.cos(phi1);
-    var z1 = 200 * Math.sin(phi1) * Math.sin(theta1);
-
-    var phi2 = (90 - toLat) * Math.PI / 180;
-    var theta2 = (180 - toLng) * Math.PI / 180;
-    var x2 = 200 * Math.sin(phi2) * Math.cos(theta2);
-    var y2 = 200 * Math.cos(phi2);
-    var z2 = 200 * Math.sin(phi2) * Math.sin(theta2);
+  function latlngToVec(lat, lng, alt) {
+    alt = RADIUS + (alt || 0);
+    var phi = (90 - lat) * Math.PI / 180;
+    var theta = (180 - lng) * Math.PI / 180;
+    var x = alt * Math.sin(phi) * Math.cos(theta); //x
+    var y = alt * Math.cos(phi); //z
+    var z = alt * Math.sin(phi) * Math.sin(theta); //y
+    return new THREE.Vector3(x, y, z);
+  }
 
 
 
+  function createSplineCurve(fromLat, fromLng, toLat, toLng) {
     var geometry = new THREE.Geometry();
-    geometry.vertices.push(new THREE.Vector3(x1, y1, z1));
-    geometry.vertices.push(new THREE.Vector3(x2, y2, z2));
+    var startVec = latlngToVec(fromLat, fromLng),
+      endVec = latlngToVec(toLat, toLng);
+
+    geometry.vertices.push(startVec);
+
+
+    var dist = startVec.distanceTo(endVec);
+
+
+
+    var NUM_SPLINE_POINTS = 80,
+      dx = dist / NUM_SPLINE_POINTS,
+      d = -Math.pow(dist, 2)
+      f1 = 0,
+      f2 = 0,
+      x = 0,
+      y = 0,
+      z = 0,
+      fx = function(x) {
+        return (((x * x) - (dist * x)) / d) + 1;
+      }
+
+
+    for (var i = 1; i <= NUM_SPLINE_POINTS; i++) {
+      f1 = (i / NUM_SPLINE_POINTS);
+      f2 = ((NUM_SPLINE_POINTS - i) / NUM_SPLINE_POINTS);
+
+      x = fx(i * dx) * ((f2 * startVec.x) + (f1 * endVec.x));
+      y = fx(i * dx) * ((f2 * startVec.y) + (f1 * endVec.y));
+      z = fx(i * dx) * ((f2 * startVec.z) + (f1 * endVec.z));
+      geometry.vertices.push(new THREE.Vector3(x, y, z));
+
+    }
+
+    geometry.vertices.push(endVec);
+
+
+    return geometry;
+  }
+
+
+  function addLine(fromLat, fromLng, toLat, toLng) {
+    var geometry = createSplineCurve(fromLat, fromLng, toLat, toLng);
+
 
     var material = new THREE.LineBasicMaterial({
       color: 0x0000ff
@@ -329,9 +367,9 @@ DAT.Globe = function(container, colorFn) {
     var phi = (90 - lat) * Math.PI / 180;
     var theta = (180 - lng) * Math.PI / 180;
 
-    point.position.x = 200 * Math.sin(phi) * Math.cos(theta);
-    point.position.y = 200 * Math.cos(phi);
-    point.position.z = 200 * Math.sin(phi) * Math.sin(theta);
+    point.position.x = RADIUS * Math.sin(phi) * Math.cos(theta);
+    point.position.y = RADIUS * Math.cos(phi);
+    point.position.z = RADIUS * Math.sin(phi) * Math.sin(theta);
 
     point.lookAt(mesh.position);
 
