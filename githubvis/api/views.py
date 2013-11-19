@@ -50,8 +50,6 @@ def repo(request, repo_id):
     except Repo.DoesNotExist:
         return {'message' : 'repo not found'}, 404, []
 
-
-@cacheable
 @csrf_exempt
 @json_view
 def repos(request):
