@@ -121,6 +121,8 @@ public class Call extends Node {
             return Indexer.idx.builtins.unknown;
         }
 
+
+
         if (call != null) {
             Indexer.idx.pushStack(call);
 

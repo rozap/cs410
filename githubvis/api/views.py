@@ -24,11 +24,10 @@ def cacheable(fn):
     def wrapped(*args, **kwargs):
         request = args[0]
         querystring = ''.join(['%s=%s' % (k, request.GET[k]) for k in request.GET.keys()])
-        print querystring
         cache_key = 'api-%s-%s' % (request.path, querystring)
         response = cache.get(cache_key)
         if not response:
-            print "Cache miss"
+            print "Cache miss on %s" % request.path
             response = fn(*args, **kwargs)
             cache.set(cache_key, response, 100000000)
         return response

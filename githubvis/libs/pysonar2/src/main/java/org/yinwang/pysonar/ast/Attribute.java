@@ -99,6 +99,8 @@ public class Attribute extends Node {
     private Type getAttrType(@NotNull Type targetType) {
         if (attr == null) {
             Util.msg("attr is null");
+            Type t = Indexer.idx.builtins.unknown;
+            return t;
         }
         Binding b = targetType.getTable().lookupAttr(attr.getId());
         if (b == null) {

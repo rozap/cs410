@@ -29,11 +29,6 @@ var Drawer = function(repoId) {
 		globe.createPoints();
 
 		_.each(interactionResp, function(interaction) {
-
-			if (interaction.caller.commit.actor.lat != interaction.callee.commit.actor.lat) {
-				console.log("Different!");
-			}
-
 			globe.addLine(
 				interaction.caller.commit.actor.lat, interaction.caller.commit.actor.lng,
 				interaction.callee.commit.actor.lat, interaction.callee.commit.actor.lng
