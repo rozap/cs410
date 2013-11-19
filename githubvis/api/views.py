@@ -8,9 +8,11 @@ from django.db.models.query import QuerySet
 from repos.tasks import analyze_repo
 from repos.util import repo_from_url
 from django.views.decorators.csrf import csrf_exempt
+from django.core.cache import cache
 
 def json_view(fn):
     def wrapped(*args, **kwargs):
+        print "JSON VIEW"
         data, response_code, exclude_fields = fn(*args, **kwargs)
         if not isinstance(data, dict):
             data = [d.to_dict(exclude_fields) for d in data]
@@ -18,6 +20,23 @@ def json_view(fn):
     return wrapped
 
 
+def cacheable(fn):
+    def wrapped(*args, **kwargs):
+        request = args[0]
+        querystring = ''.join(['%s=%s' % (k, request.GET[k]) for k in request.GET.keys()])
+        print querystring
+        cache_key = 'api-%s-%s' % (request.path, querystring)
+        response = cache.get(cache_key)
+        if not response:
+            print "Cache miss"
+            response = fn(*args, **kwargs)
+            cache.set(cache_key, response, 100000000)
+        return response
+    return wrapped
+
+
+
+@cacheable
 @json_view
 def repo(request, repo_id):
     try:
@@ -26,10 +45,13 @@ def repo(request, repo_id):
             .filter(commit__repo__id = repo_id)\
             .exclude(commit__actor__lat = 0)\
             .exclude(commit__actor__lng = 0)
-        return functions, 200, ['commit.repo.id', 'commit.actor.loc', 'id']
+        return functions, 200, ['commit.repo.id', 'commit.actor.loc', 'id',
+                                'commit.hexsha', 'commit.repo', 'commit.id']
     except Repo.DoesNotExist:
         return {'message' : 'repo not found'}, 404, []
 
+
+@cacheable
 @csrf_exempt
 @json_view
 def repos(request):
@@ -56,15 +78,18 @@ def repos(request):
         }, 200, []
 
 
-
+@cacheable
 @json_view
 def interactions(request, repo_id):
     try:
         repo = Repo.objects.get(id = repo_id)
-        calls = FunctionCall.objects.filter(caller__commit__repo = repo)\
+        calls = FunctionCall.objects.select_related('commit', 'commit__actor')\
+                .filter(caller__commit__repo = repo)\
             .exclude(caller__commit__actor__lat = 0)\
             .exclude(callee__commit__actor__lat = 0)
 
-        return calls, 200, []
+        return calls, 200, ['caller.commit.repo', 'callee.commit.repo', 'id',
+                             'caller.commit.hexsha', 'caller.commit.id', 'caller.commit.actor.id',
+                            'callee.commit.hexsha', 'callee.commit.id', 'callee.commit.actor.id']
     except Repo.DoesNotExist:
         return {'message' : 'Invalid id'}, 404, []
