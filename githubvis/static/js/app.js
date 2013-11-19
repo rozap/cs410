@@ -61,10 +61,6 @@ var Drawer = function(repoId) {
 			return;
 		}
 		_.each(interactionResp, function(interaction) {
-
-			if (interaction.caller.commit.actor.lat != interaction.callee.commit.actor.lat) {
-				console.log("Different!");
-			}
 			functionLines.push(globe.addLine(
 				interaction.caller.commit.actor.lat, interaction.caller.commit.actor.lng,
 				interaction.callee.commit.actor.lat, interaction.callee.commit.actor.lng, 0x00ff00
