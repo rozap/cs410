@@ -51,3 +51,14 @@ class Function(BaseModel):
 class FunctionCall(BaseModel):
     caller = models.ForeignKey(Function, related_name = 'function_call_caller')
     callee = models.ForeignKey(Function, related_name = 'function_call_callee')
+
+
+
+class FileChange(BaseModel):
+    commit = models.ForeignKey(Commit)
+    path = models.CharField(max_length=512, default = '')
+    actor = models.ForeignKey(Actor)
+
+class CommonFileChange(BaseModel):
+    change1 = models.ForeignKey(FileChange, related_name = 'file_changes1')
+    change2 = models.ForeignKey(FileChange, related_name = 'file_change2')

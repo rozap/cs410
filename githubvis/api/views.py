@@ -1,7 +1,7 @@
 # Create your views here.
 import json
 from django.http import HttpResponse, HttpResponseForbidden
-from repos.models import Repo, Actor, Commit, Function, FunctionCall
+from repos.models import Repo, Actor, Commit, Function, FunctionCall, CommonFileChange
 import datetime
 from repos.models import BaseModel
 from django.db.models.query import QuerySet
@@ -90,3 +90,10 @@ def interactions(request, repo_id):
                             'callee.commit.hexsha', 'callee.commit.id', 'callee.commit.actor.id']
     except Repo.DoesNotExist:
         return {'message' : 'Invalid id'}, 404, []
+
+@cacheable
+@json_view
+def common_file_changes(request, repo_id):
+    changes = CommonFileChange.objects.select_related('change1__actor', 'change2__actor')\
+                .filter(change1__commit__repo__id = repo_id)
+    return changes, 200, ['change1.commit', 'change2.commit', 'id']

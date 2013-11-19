@@ -4,7 +4,6 @@ var Home = function() {
 	this.submitRepo = function(e) {
 		var url = $('#repo-url').val(),
 			$res = $('#submit-result');
-		console.log(url);
 		$.ajax({
 			url: '/api/repos',
 			data: JSON.stringify({
@@ -21,7 +20,6 @@ var Home = function() {
 			var data = JSON.parse(resp.responseText);
 			$res.addClass('alert-danger').removeClass('alert-success').html(data.message).show();
 		});
-		console.log("Submit!");
 	}
 
 

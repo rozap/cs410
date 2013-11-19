@@ -117,6 +117,7 @@ DAT.Globe = function(container, colorFn) {
     camera = new THREE.Camera(
       30, w / h, 1, 10000);
     camera.position.z = distance;
+    window.camera = camera;
 
     vector = new THREE.Vector3();
 
@@ -314,10 +315,9 @@ DAT.Globe = function(container, colorFn) {
 
     geometry.vertices.push(startVec);
 
-
-    var dist = startVec.distanceTo(endVec);
-
-
+    var nStart = new THREE.Vector3().copy(startVec).normalize();
+    var nEnd = new THREE.Vector3().copy(endVec).normalize();
+    var dist = RADIUS * Math.acos(nStart.dot(nEnd));
 
     var NUM_SPLINE_POINTS = 80,
       dx = dist / NUM_SPLINE_POINTS,
@@ -327,7 +327,8 @@ DAT.Globe = function(container, colorFn) {
       y = 0,
       z = 0,
       fx = function(x) {
-        return (((x * x) - (dist * x)) / (-Math.pow(dist, 1.8))) + 1;
+        x = (-Math.abs(x - (dist / 2)) + (dist / 2));
+        return ((Math.pow(x, 2) - (dist * x)) / (-Math.pow(dist, 1.9))) + 1;
       }
 
 
@@ -349,18 +350,24 @@ DAT.Globe = function(container, colorFn) {
   }
 
 
-  function addLine(fromLat, fromLng, toLat, toLng) {
+  function addLine(fromLat, fromLng, toLat, toLng, color, opacity) {
     var geometry = createSplineCurve(fromLat, fromLng, toLat, toLng);
 
 
     var material = new THREE.LineBasicMaterial({
-      color: 0x0000ff
+      color: color,
+      opacity: opacity,
+      depthWrite: true,
+      depthTest: true
     });
 
 
     var line = new THREE.Line(geometry, material);
     scene.addObject(line);
+    return line;
   }
+
+
 
   function addPoint(lat, lng, size, color, subgeo) {
     var phi = (90 - lat) * Math.PI / 180;

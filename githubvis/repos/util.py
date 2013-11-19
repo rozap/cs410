@@ -1,6 +1,6 @@
 from git import Repo
 from django.conf import settings
-from models import Repo as RepoModel, Actor, Commit, Function, FunctionCall
+from models import Repo as RepoModel, Actor, Commit, Function, FunctionCall, FileChange, CommonFileChange
 import ast
 import re
 from threading import Thread
@@ -32,18 +32,47 @@ def func_line_to_path(line):
     return sp[0], sp[1]
 
 
+def files_in_common(r):
+    already_common = {}
+    def mark(a1, a2):
+        already_common['%s_%s' % (a1.id, a2.id)] = True
+
+    def common_exists(a1, a2):
+        return already_common.get('%s_%s' %(a1.id, a2.id), False)
+
+    changes = FileChange.objects.select_related('actor')\
+                .filter(commit__repo = r)\
+            .exclude(actor__lat = 0)\
+            .exclude(actor__lng = 0)
+    
+    with transaction.commit_on_success():
+        for c in changes:
+            #Get the changes that were not made by this actor, and have a location associated
+            common_changes = FileChange.objects.select_related('actor')\
+                                .exclude(actor = c.actor)\
+                                .exclude(actor__lat = 0)\
+                                .exclude(actor__lng = 0)\
+                                .filter(path = c.path)
+            for cc in common_changes:
+                if not common_exists(c.actor, cc.actor):
+                    print "%s changed by %s and %s" % (cc.path[-10:], c.actor.full_name, cc.actor.full_name)
+                    CommonFileChange(change1 = c, change2 = cc).save()
+                    mark(c.actor, cc.actor)
+
 
 def test():
-    RepoModel.objects.get(username = 'kennethreitz', name = 'requests').delete()
     return analyze_repo('https://github.com/kennethreitz/requests')
 
+def test_changes():
+    r = RepoModel.objects.get(id = 23)
+    files_in_common(r)
 
 def analyze_repo(url):
-    # get_remote_repo(url)
+    get_remote_repo(url)
     username, repo_name = repo_from_url(url)
 
-    # a = Analyzer(username, repo_name)
-    # a.walk_commits()
+    a = Analyzer(username, repo_name)
+    a.walk_commits()
 
     #Path to the code to analyze
     r_path = repo_path(username, repo_name)
@@ -82,8 +111,7 @@ def analyze_repo(url):
 
                 except Function.DoesNotExist:
                     print "NO| %s %s" % (caller_path, caller_name)
-                    
-
+    return a.repo_model        
 
 
 class Analyzer(object):
@@ -121,12 +149,15 @@ class Analyzer(object):
         classes = self.get_classes(body)
         for c in classes:
             funcs = funcs + self.get_all_funcs_from_body(c.body)
+        for f in funcs:
+            funcs = funcs + self.get_all_funcs_from_body(f.body)
         return funcs
 
 
 
     def read_diffs(self, diffs):
         new_funcs = []
+        files_changed = []
         for diff in diffs:
 
             if diff.a_blob and diff.b_blob:
@@ -145,6 +176,7 @@ class Analyzer(object):
                 a_func_names = [f.name for f in a_funcs]
                 
                 file_name = diff.a_blob.abspath + diff.a_blob.name
+                files_changed.append(file_name)
                 if not self.seen_files.get(file_name, False):
                     #This is a new file, so ALL functions contained within it are new
                     self.seen_files[file_name] = True
@@ -175,20 +207,21 @@ class Analyzer(object):
                     new_funcs = new_funcs + [(diff.a_blob.abspath, fname) for fname in new_in_this_diff]
 
 
-        return new_funcs
+        return new_funcs, files_changed
 
 
-    def store(self, commit, new_funcs):
+    def store(self, commit, new_funcs, files_changed):
         name = commit.author.name
         date = commit.committed_date
 
         self.cached_data[commit.hexsha] = {
             'name' : name,
             'date' : date,
-            'funcs' : new_funcs
+            'funcs' : new_funcs, 
+            'files_changed' : files_changed
         }
 
-        if(len(self.cached_data.keys()) > 20):
+        if(len(self.cached_data.keys()) > 30):
             with transaction.commit_on_success():
                 self.do_save()
 
@@ -197,7 +230,6 @@ class Analyzer(object):
         for hexsha in self.cached_data:
 
             val = self.cached_data[hexsha]
-
             try:
                 actor = Actor.objects.get(full_name = val['name'])
             except Actor.DoesNotExist:
@@ -216,6 +248,9 @@ class Analyzer(object):
                     fmodel = Function(name = fun, commit = commit, path = path)
                     fmodel.save()
                     print "Saved  `%s` : `%s`" % (path[-16:], fun)
+
+            for file_name in val['files_changed']:
+                FileChange(path = file_name, actor = actor, commit = commit).save()
 
 
         self.cached_data.clear()
@@ -237,10 +272,8 @@ class Analyzer(object):
             try:
                 diffs = commit.diff(commit.parents[0])
                 diffs = [d for d in diffs if self.is_python_file(d)]
-                new_funcs = self.read_diffs(diffs)
-
-                if new_funcs:
-                    self.store(commit, new_funcs)
+                new_funcs, files_changed = self.read_diffs(diffs)
+                self.store(commit, new_funcs, files_changed)
             except LookupError:
                 #This seems to be a bug in PyGit maybe?
                 #seems to throw this sometimes, not much we can do here...
