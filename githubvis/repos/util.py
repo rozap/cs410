@@ -39,11 +39,11 @@ def test():
 
 
 def analyze_repo(url):
-    get_remote_repo(url)
+    # get_remote_repo(url)
     username, repo_name = repo_from_url(url)
 
-    a = Analyzer(username, repo_name)
-    a.walk_commits()
+    # a = Analyzer(username, repo_name)
+    # a.walk_commits()
 
     #Path to the code to analyze
     r_path = repo_path(username, repo_name)

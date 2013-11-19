@@ -321,14 +321,13 @@ DAT.Globe = function(container, colorFn) {
 
     var NUM_SPLINE_POINTS = 80,
       dx = dist / NUM_SPLINE_POINTS,
-      d = -Math.pow(dist, 2)
       f1 = 0,
       f2 = 0,
       x = 0,
       y = 0,
       z = 0,
       fx = function(x) {
-        return (((x * x) - (dist * x)) / d) + 1;
+        return (((x * x) - (dist * x)) / (-Math.pow(dist, 1.8))) + 1;
       }
 
 
