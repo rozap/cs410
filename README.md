@@ -15,4 +15,4 @@ https://mayan.readthedocs.org/en/v0.13/faq/index.html
   * pip install -r requirements.txt
 
 
-(http://i.imgur.com/8Hok8Lx.png)
+![sample output in an early version](http://i.imgur.com/8Hok8Lx.png)
