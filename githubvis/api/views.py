@@ -12,7 +12,6 @@ from django.core.cache import cache
 
 def json_view(fn):
     def wrapped(*args, **kwargs):
-        print "JSON VIEW"
         data, response_code, exclude_fields = fn(*args, **kwargs)
         if not isinstance(data, dict):
             data = [d.to_dict(exclude_fields) for d in data]
@@ -26,8 +25,7 @@ def cacheable(fn):
         querystring = ''.join(['%s=%s' % (k, request.GET[k]) for k in request.GET.keys()])
         cache_key = 'api-%s-%s' % (request.path, querystring)
         response = cache.get(cache_key)
-        if not response:
-            print "Cache miss on %s" % request.path
+        if not response or not request.method == 'GET':
             response = fn(*args, **kwargs)
             cache.set(cache_key, response, 100000000)
         return response
@@ -56,6 +54,7 @@ def repos(request):
         repos = Repo.objects.all()
         return repos, 200, []
     elif request.method == 'POST':
+        print "REPO SUBMITTED!"
         data = json.loads(request.body)
         url = data['url']
         try:
