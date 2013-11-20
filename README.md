@@ -14,3 +14,5 @@ https://mayan.readthedocs.org/en/v0.13/faq/index.html
   * RabbitMQ (thru ap, default settings)
   * pip install -r requirements.txt
 
+
+![sample output in an early version](http://i.imgur.com/8Hok8Lx.png)
