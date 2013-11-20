@@ -5,17 +5,13 @@ class BaseModel(models.Model):
 
 	class Meta:
 		abstract = True
-
+	
+	#i'm so sorry
 	def to_dict(self, exclude_fields):
-        #hahahahahahahahaha why did i write this
 		these_fields = [f for f in exclude_fields if not '.' in f]
-        #really it made sense at the time
 		next_fields = ['.'.join(f.split('.')[1:]) for f in exclude_fields]
-        #now it doesn't really
 		d = {field.name : getattr(self, field.name) for field in self._meta.fields if not getattr(getattr(self, field.name), 'to_dict', False) and not field.name in these_fields}
-        #sorry about that
 		d.update({field.name : getattr(self, field.name).to_dict(next_fields) for field in self._meta.fields if getattr(getattr(self, field.name), 'to_dict', False) and not field.name in these_fields})
-        #it's clever but that's not a good thing
 		return d
 
 
