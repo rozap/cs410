@@ -1,6 +1,10 @@
 #CPSC 410 Project
 ----
 
+## ~~** DATA VIS ** ~~ 
+
+### wow
+
 Repos can be submitted through the web front end. look at the api/repos endpoint to see what's happening. 
 
 ### MySQL Hack
@@ -14,5 +18,7 @@ https://mayan.readthedocs.org/en/v0.13/faq/index.html
   * RabbitMQ (thru ap, default settings)
   * pip install -r requirements.txt
 
+![sample output in an early version](http://i.imgur.com/3U0nXJK.png)
+![sample output in an early version](http://i.imgur.com/LlzXNym.png)
 
-![sample output in an early version](http://i.imgur.com/8Hok8Lx.png)
+![sample output in an early version](http://i.imgur.com/7dcbNXf.png)
