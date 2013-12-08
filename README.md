@@ -6,7 +6,7 @@
 ### wow
 
 
-#### prompt for the project was "ask some question about some code base, and build a visualization that answers that question" ![this video explains it](http://www.youtube.com/watch?v=JS1EumDXlsQ&list=PL5PYPo_W3DYen_0YhFdUozZKJ2XfONogN&index=23)
+#### prompt for the project was "ask some question about some code base, and build a visualization that answers that question" http://www.youtube.com/watch?v=JS1EumDXlsQ&list=PL5PYPo_W3DYen_0YhFdUozZKJ2XfONogN&index=23
 
 Repos can be submitted through the web front end. look at the api/repos endpoint to see what's happening. 
 
